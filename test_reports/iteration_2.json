@@ -1,0 +1,37 @@
+{
+  "summary": "Frontend-only retest of BYDAUTO.AE landing page after real Web3Forms key was added. Regression items all PASS (root iframe, hero + bg image, EN/FR language switch, modal open/close/Escape). CRITICAL: offer submission STILL FAILS — Web3Forms rejects the CORS preflight (OPTIONS) with HTTP 403 and NO Access-Control-Allow-Origin header, so the browser blocks the POST before it ever reaches the API. This is reproducible from headless Playwright and, based on the request implementation, will fail in any real browser too (JSON body triggers a preflight that Web3Forms is refusing for this origin/key).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "OfferForm submit (#offerForm -> https://api.web3forms.com/submit)",
+        "issue": "CORS preflight to Web3Forms fails: OPTIONS returns HTTP 403 with body {\"success\":false,\"message\":\"This method is not allowed. Use our API in client side or contact support with server IP address (Pro plan is required)\"} and no Access-Control-Allow-* headers. Browser therefore blocks the POST (net::ERR_FAILED, 'Response to preflight request doesn't pass access control check: No Access-Control-Allow-Origin header'). #successView never becomes 'show'; #formerr shows 'Something went wrong. Please try again or email us directly.' The submitBtn correctly re-enables and text resets to 'Submit offer'. The problem is NOT the access key (curl POST with the real key gets a normal JSON response from Web3Forms) — it is that the current fetch() sends Content-Type: application/json which forces a CORS preflight that Web3Forms refuses.",
+        "selector": "#submitBtn / fetch(https://api.web3forms.com/submit)",
+        "priority": "CRITICAL"
+      }
+    ],
+    "integration_issues": [
+      {
+        "flow": "Make an offer submission",
+        "issue": "End-to-end submission cannot succeed in any browser with the current implementation. Recommended fix (developer): change the fetch to a 'simple request' that skips CORS preflight — either send FormData (multipart/form-data auto Content-Type) or URL-encoded body with Content-Type 'application/x-www-form-urlencoded'. Web3Forms officially supports both. Alternative: POST from a backend proxy endpoint (/api/offer) that forwards to Web3Forms server-to-server.",
+        "affected_selectors": ["#offerForm", "#submitBtn", "#successView", "#formerr"]
+      }
+    ],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [
+    "Fix Web3Forms submission by removing the JSON Content-Type that triggers a preflight. Swap fetch body to FormData (recommended) or URLSearchParams so the request qualifies as a CORS 'simple request'. Example: `const fd = new FormData(); Object.entries(payload).forEach(([k,v]) => fd.append(k, v)); fetch(url, {method:'POST', body: fd});` (do NOT set Content-Type header manually).",
+    "After fix, re-run this iteration to confirm #successView gets 'show' and #formerr stays hidden."
+  ],
+  "critical_code_review_comments": [
+    "bydauto.html line 513-517: fetch to api.web3forms.com uses Content-Type application/json which mandates a CORS preflight. Web3Forms rejects that OPTIONS with 403, so submissions never go through in the browser. Switch to FormData/URLSearchParams to make it a simple, preflight-free request."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "n/a", "frontend": "80% (4/5 flows pass; submission fails)"},
+  "seed_data_creation": "None (submission blocked by CORS, so no test email was actually sent)",
+  "should_call_test_agent_after_fix": true,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Regression UI is solid (iframe root, hero bg image, EN/FR i18n, [data-open]/#close/Escape all verified). Only remaining validation is the offer submission success path once the CORS/preflight issue is fixed. Re-open {REACT_APP_BACKEND_URL}/bydauto.html?static&open, submit the sample payload, and assert #successView has class 'show' within ~10s. Curl-verified that the real key e8cc8f60-... is accepted by Web3Forms (server responds normally), so once the client-side request is preflight-free, submissions should succeed.",
+  "rca_of_the_issue": "The offer form POSTs JSON to https://api.web3forms.com/submit. A JSON Content-Type is a non-simple CORS request and forces the browser to send an OPTIONS preflight. Web3Forms responds to that OPTIONS with HTTP 403 and no Access-Control-Allow-Origin header (verified via curl -X OPTIONS with the same Origin header). Because the preflight fails, the browser aborts the actual POST with net::ERR_FAILED, the promise rejects into the catch block, and the UI shows the #formerr fallback message instead of the #successView confirmation. The real Web3Forms access key is valid — direct POSTs from curl are accepted — so the fix belongs in the client: submit with FormData or application/x-www-form-urlencoded so the request qualifies as a CORS 'simple request' and no preflight is needed."
+}
