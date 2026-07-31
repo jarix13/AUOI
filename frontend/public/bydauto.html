@@ -522,6 +522,8 @@ form.addEventListener('submit',async e=>{
       document.getElementById('successView').classList.add('show');
     }else{throw new Error(data.message||'failed');}
   }catch(err){
+    console.error('Web3Forms submit error:',err);
+    formerr.textContent=t.error_text;
     formerr.style.display='block';
     submitBtn.disabled=false;submitBtn.textContent=t.submit;
   }
