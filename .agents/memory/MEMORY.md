@@ -1,0 +1,1 @@
+- [Vercel deployment quirks](vercel-deploy.md) — connector creds withheld from sandbox; per-artifact vercel.json needed; Web3Forms blocks replit domains.
