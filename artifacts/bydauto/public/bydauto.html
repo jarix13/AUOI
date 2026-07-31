@@ -168,8 +168,8 @@
   input:focus,textarea:focus{border-color:var(--violet);background:#fff;box-shadow:0 0 0 3px rgba(139,92,255,.13)}
   input::placeholder,textarea::placeholder{color:#b4bbd0}
   textarea{resize:vertical;min-height:80px}
-  .ridicule{font-size:12.5px;color:#92600a;background:#fffbeb;border:1px solid #fde68a;padding:10px 13px;border-radius:11px;margin:2px 0 14px;display:flex;gap:9px;align-items:flex-start}
-  .ridicule svg{flex-shrink:0;margin-top:1px;color:#b45309}
+  .ridicule{font-size:12.5px;color:#7a8099;padding:0 2px;margin:2px 0 14px;display:flex;gap:8px;align-items:flex-start;line-height:1.5}
+  .ridicule svg{flex-shrink:0;margin-top:2px;color:var(--violet)}
   .modal .cta{margin-top:6px}
   .cta[disabled]{opacity:.7;cursor:not-allowed}
   .modal-trust{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:13px;color:#9aa0bb;font-size:12.5px}
@@ -377,7 +377,7 @@
           </div>
           <div class="field"><label data-i18n="f_amount">Your offer (USD)</label><input type="number" name="amount" min="1" step="any" required placeholder="25000" data-ph="f_amount_ph" /></div>
           <div class="ridicule">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
             <span data-i18n="ridicule">Please submit a serious proposal — unreasonable or lowball offers will not be considered.</span>
           </div>
           <div class="field"><label data-i18n="f_message">Message</label><textarea name="message" data-ph="f_message_ph" placeholder="Share your intended use or any questions…"></textarea></div>
