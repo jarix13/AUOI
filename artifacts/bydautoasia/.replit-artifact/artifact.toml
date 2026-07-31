@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/bydautoasia/"
+title = "BYDAUTOASIA.COM"
+version = "1.0.0"
+id = "artifacts/bydautoasia"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/bydautoasia/" ]
+localPort = 19157
+
+[services.development]
+run = "pnpm --filter @workspace/bydautoasia run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/bydautoasia", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/bydautoasia/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19157"
+BASE_PATH = "/bydautoasia/"

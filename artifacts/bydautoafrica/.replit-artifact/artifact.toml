@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/bydautoafrica/"
+title = "BYDAUTOAFRICA.COM"
+version = "1.0.0"
+id = "artifacts/bydautoafrica"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/bydautoafrica/" ]
+localPort = 22197
+
+[services.development]
+run = "pnpm --filter @workspace/bydautoafrica run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/bydautoafrica", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/bydautoafrica/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22197"
+BASE_PATH = "/bydautoafrica/"

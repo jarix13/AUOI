@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BYDAUTOASIA.COM — Premium Domain For Sale</title>
+<meta name="description" content="BYDAUTOASIA.COM — a rare, category-defining premium domain for the automotive world across Asia on the trusted global .COM extension. Make an offer." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Sans+JP:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#06070d;
+    --bg2:#0a0c16;
+    --ink:#0a0b14;
+    --white:#ffffff;
+    --muted:#9aa0bb;
+    --violet:#8b5cff;
+    --blue:#37a5ff;
+    --line:rgba(255,255,255,.09);
+    --grad:linear-gradient(120deg,#7b4dff 0%,#4f6dff 45%,#37a5ff 100%);
+    --radius:22px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{background:var(--bg);color:#eef0fb}
+  body{background:transparent;color:#eef0fb;
+    font-family:"General Sans","Noto Sans Arabic","Noto Sans SC","Noto Sans JP",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    line-height:1.55;
+  }
+  h1,h2,h3,.display{font-family:"Clash Display","Noto Sans Arabic","Noto Sans SC","Noto Sans JP",system-ui,sans-serif;font-weight:600;line-height:1.02;letter-spacing:-.01em}
+  .hero-title,.brand{direction:ltr}
+  ::selection{background:var(--violet);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  button{font-family:inherit;cursor:pointer}
+
+  /* animated aurora background */
+  .bg-fx{position:fixed;inset:0;z-index:-2;overflow:hidden;background:radial-gradient(130% 100% at 50% -10%,#1e1b52 0%,#0c0d20 45%,#06070d 75%)}
+  .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.72;will-change:transform}
+  .orb.v{width:52vw;height:52vw;background:#7b4dff;top:-16vw;left:-8vw;animation:float1 16s ease-in-out infinite}
+  .orb.b{width:48vw;height:48vw;background:#2f7dff;bottom:-16vw;right:-6vw;animation:float2 19s ease-in-out infinite}
+  .orb.c{width:32vw;height:32vw;background:#28d3ff;top:36%;left:52%;opacity:.34;animation:float1 22s ease-in-out infinite}
+  @keyframes float1{50%{transform:translate(6vw,5vw) scale(1.1)}}
+  @keyframes float2{50%{transform:translate(-5vw,-4vw) scale(1.08)}}
+  .grid-fx{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(100% 70% at 50% 20%,#000 0%,transparent 75%);opacity:.5}
+  .noise{position:fixed;inset:0;z-index:-1;opacity:.045;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  .wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:18px 0;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+  nav.scrolled{background:rgba(6,7,13,.7);backdrop-filter:blur(16px);border-color:var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:600;letter-spacing:.02em}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--grad);box-shadow:0 0 16px #6f6bff}
+  .brand small{font-size:12px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+
+  /* language selector */
+  .lang{position:relative}
+  .lang-btn{display:flex;align-items:center;gap:9px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:#fff;padding:9px 14px;border-radius:100px;font-size:13.5px;font-weight:500;transition:background .25s,border-color .25s}
+  .lang-btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25)}
+  .lang-btn .chev{transition:transform .3s}
+  .lang.open .chev{transform:rotate(180deg)}
+  .lang-menu{position:absolute;top:calc(100% + 10px);inset-inline-end:0;background:rgba(14,16,28,.92);backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:16px;padding:8px;min-width:190px;display:grid;grid-template-columns:1fr 1fr;gap:4px;opacity:0;visibility:hidden;transform:translateY(-8px) scale(.97);transform-origin:top;transition:opacity .25s,transform .25s,visibility .25s;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+  .lang.open .lang-menu{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+  .lang-opt{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:11px;font-size:13.5px;color:#d6d9ec;transition:background .2s,color .2s;background:none;border:none;text-align:start;width:100%}
+  .lang-opt:hover{background:rgba(255,255,255,.08);color:#fff}
+  .lang-opt.active{background:var(--grad);color:#fff}
+  .lang-opt .fl{font-size:15px}
+
+  /* HERO */
+  header{position:relative;min-height:100vh;display:flex;align-items:center;padding:150px 0 80px}
+  .badge{display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border:1px solid var(--line);border-radius:100px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#c7cbe6;background:rgba(255,255,255,.04);margin-bottom:30px}
+  .badge i{width:7px;height:7px;border-radius:50%;background:#3ee6a0;box-shadow:0 0 12px #3ee6a0;animation:pulse 1.8s infinite}
+  @keyframes pulse{50%{opacity:.4}}
+  .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.05)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,7,13,.9),rgba(6,7,13,.58) 44%,rgba(6,7,13,.18)),linear-gradient(180deg,rgba(6,7,13,.15),rgba(6,7,13,.82))}
+  header .wrap,header .scrollcue{position:relative;z-index:2}
+  .hero-forsale{font-family:"Clash Display",system-ui,sans-serif;font-weight:600;font-size:clamp(1.15rem,2vw,1.75rem);margin-top:22px;color:#fff;letter-spacing:-.01em}
+  .statement{max-width:920px}
+  .hero-title{font-size:clamp(2.2rem,6.5vw,5.6rem);letter-spacing:-.03em;line-height:.9}
+  .hero-title .gr{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero-title .gr .char{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .line-mask{overflow:hidden;display:block}
+  .hero-title .char{display:inline-block;transform:translateY(115%);animation:charUp .95s cubic-bezier(.16,1,.3,1) forwards;will-change:transform}
+  @keyframes charUp{to{transform:translateY(0)}}
+  .hero-sub{max-width:560px;font-size:clamp(1rem,1.4vw,1.22rem);color:var(--muted);margin-top:26px}
+
+  /* white center card */
+  .hero-grid{display:grid;grid-template-columns:1.35fr .95fr;gap:52px;align-items:center;width:100%}
+  .card{background:#fff;color:var(--ink);border-radius:26px;padding:38px 34px;box-shadow:0 40px 90px rgba(20,10,60,.55),0 0 0 1px rgba(255,255,255,.6) inset;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 100% 0%,rgba(123,77,255,.10),transparent 60%)}
+  .card .k{position:relative;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#7b4dff;font-weight:600}
+  .card h3{position:relative;font-size:clamp(1.55rem,2.4vw,2rem);color:#0a0b14;margin:14px 0 8px}
+  .card .cnote{position:relative;display:flex;align-items:center;gap:9px;color:#5a607a;font-size:14px;margin:16px 0 26px}
+  .card .cnote svg{color:#2fb56a;flex-shrink:0}
+  .cta{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:18px 26px;border:none;border-radius:100px;background:var(--grad);color:#fff;font-size:16.5px;font-weight:600;letter-spacing:.01em;box-shadow:0 16px 40px rgba(90,70,255,.45);transition:transform .3s,box-shadow .3s;background-size:180% 180%}
+  .cta:hover{transform:translateY(-3px);box-shadow:0 24px 55px rgba(90,70,255,.6);background-position:100% 0}
+  .cta:active{transform:translateY(-1px) scale(.99)}
+  .scrollcue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:9px;color:var(--muted);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase}
+  .scrollcue .m{width:22px;height:36px;border:1.5px solid var(--line);border-radius:12px;position:relative}
+  .scrollcue .m::after{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:3.5px;height:8px;background:#fff;border-radius:2px;animation:sc 1.6s infinite}
+  @keyframes sc{0%{opacity:0;top:6px}30%{opacity:1}100%{opacity:0;top:18px}}
+
+  /* SECTION shared */
+  section{position:relative;padding:120px 0}
+  .kicker{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:#8b7bff;font-weight:600;margin-bottom:16px}
+  .sec-title{font-size:clamp(2rem,5vw,3.6rem);max-width:16ch}
+  [data-reveal]{opacity:0;transform:translateY(34px);transition:opacity .95s cubic-bezier(.16,1,.3,1),transform .95s cubic-bezier(.16,1,.3,1)}
+  [data-reveal].in{opacity:1;transform:none}
+  html.static [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+  html.static .char{transform:none!important;animation:none!important}
+
+  /* advantages */
+  .adv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:56px}
+  .adv{position:relative;padding:34px 30px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));overflow:hidden;transition:transform .4s,border-color .4s}
+  .adv:hover{transform:translateY(-6px);border-color:rgba(139,124,255,.4)}
+  .adv::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 0% 0%,rgba(123,77,255,.14),transparent 55%);opacity:0;transition:opacity .4s}
+  .adv:hover::after{opacity:1}
+  .adv .no{font-family:"Clash Display";font-size:13px;color:var(--muted);letter-spacing:.1em}
+  .adv .ic{width:56px;height:56px;border-radius:15px;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid var(--line);margin:18px 0 22px;color:#b9b6ff}
+  .adv h3{font-size:1.4rem;color:#fff;margin-bottom:10px}
+  .adv p{color:var(--muted);font-size:15px}
+
+  /* spotlight */
+  .spot{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .spot .frame{position:relative;border-radius:24px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:#000}
+  .spot .frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform;filter:contrast(1.05) saturate(1.05)}
+  .spot .frame::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 50%,transparent,rgba(6,7,13,.55));mix-blend-mode:multiply}
+  .spot .frame .tag{position:absolute;bottom:16px;inset-inline-start:16px;z-index:2;background:rgba(6,7,13,.6);backdrop-filter:blur(8px);border:1px solid var(--line);padding:8px 15px;border-radius:100px;font-size:12.5px;letter-spacing:.1em;color:#d6d9ec}
+  .spot p{color:var(--muted);font-size:clamp(1rem,1.3vw,1.15rem);margin-top:22px;max-width:52ch}
+
+  /* marquee */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0;overflow:hidden;white-space:nowrap;-webkit-user-select:none;user-select:none}
+  .marquee .track{display:inline-flex;gap:44px;animation:scrollx 26s linear infinite;will-change:transform}
+  .marquee span{font-family:"Clash Display";font-size:clamp(1.6rem,4vw,3rem);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.35);letter-spacing:-.01em}
+  .marquee span.fill{color:#fff;-webkit-text-stroke:0}
+  .marquee .star{color:#8b7bff;-webkit-text-stroke:0}
+  @keyframes scrollx{to{transform:translateX(-50%)}}
+
+  /* final CTA */
+  .final{text-align:center}
+  .final h2{font-size:clamp(2.4rem,7vw,5.5rem)}
+  .final h2 .gr{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .final p{color:var(--muted);max-width:46ch;margin:20px auto 34px;font-size:1.08rem}
+  .final .cta{width:auto;padding:19px 42px}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--muted);font-size:13.5px}
+
+  /* OFFER FORM — inline light card */
+  .offer-sec{display:flex;justify-content:center;padding:10px 20px 110px}
+  .modal{width:100%;max-width:560px;background:#ffffff;border-radius:26px;padding:36px 32px 26px;position:relative;box-shadow:0 40px 90px rgba(20,10,60,.42),0 0 0 1px rgba(0,0,0,.055)}
+  @keyframes modalIn{to{transform:scale(1) translateY(0);opacity:1}}
+  .modal .top-accent{position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad);border-radius:26px 26px 0 0}
+  .modal h3{font-size:1.55rem;color:#0a0b14;font-family:"Clash Display","Noto Sans Arabic",system-ui,sans-serif;font-weight:600;letter-spacing:-.01em}
+  .modal .msub{color:#5a607a;font-size:14px;margin:7px 0 20px;line-height:1.5}
+  .field{margin-bottom:12px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  label{display:block;font-size:11.5px;color:#7a8099;margin-bottom:6px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+  input,textarea{width:100%;background:#f5f6fb;border:1.5px solid #e2e6f0;border-radius:12px;padding:12px 14px;color:#0a0b14;font-size:14.5px;font-family:inherit;transition:border-color .2s,background .2s,box-shadow .2s;outline:none}
+  input:focus,textarea:focus{border-color:var(--violet);background:#fff;box-shadow:0 0 0 3px rgba(139,92,255,.13)}
+  input::placeholder,textarea::placeholder{color:#b4bbd0}
+  textarea{resize:vertical;min-height:80px}
+  .ridicule{font-size:12.5px;color:#7a8099;padding:0 2px;margin:2px 0 14px;display:flex;gap:8px;align-items:flex-start;line-height:1.5}
+  .ridicule svg{flex-shrink:0;margin-top:2px;color:var(--violet)}
+  .modal .cta{margin-top:6px}
+  .cta[disabled]{opacity:.7;cursor:not-allowed}
+  .modal-trust{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:13px;color:#9aa0bb;font-size:12.5px}
+  .modal-trust svg{color:#2fb56a;flex-shrink:0}
+  .success{text-align:center;padding:26px 6px;display:none}
+  .success.show{display:block;animation:modalIn .5s cubic-bezier(.16,1,.3,1)}
+  .success .tick{width:76px;height:76px;border-radius:50%;background:rgba(47,181,106,.1);border:1px solid rgba(47,181,106,.3);display:grid;place-items:center;margin:0 auto 20px;color:#2fb56a}
+  .success h3{color:#0a0b14;font-family:"Clash Display",system-ui,sans-serif;margin-bottom:10px}
+  .success p{color:#5a607a;font-size:14.5px}
+  .formerr{display:none;color:#dc2626;font-size:13.5px;margin-top:10px;text-align:center}
+
+  .offers{position:relative;display:inline-flex;align-items:center;gap:9px;margin:0 0 20px;padding:8px 14px;border-radius:100px;background:rgba(123,77,255,.09);border:1px solid rgba(123,77,255,.22);color:#4b3ca8;font-size:13px;font-weight:600}
+  .offers .pulse{width:8px;height:8px;border-radius:50%;background:#7b4dff;animation:opulse 1.8s infinite}
+  .offers b{font-weight:700}
+  @keyframes opulse{0%{box-shadow:0 0 0 0 rgba(123,77,255,.5)}70%{box-shadow:0 0 0 8px rgba(123,77,255,0)}100%{box-shadow:0 0 0 0 rgba(123,77,255,0)}}
+  .sec-lead{color:var(--muted);max-width:62ch;margin-top:18px;font-size:clamp(1rem,1.2vw,1.1rem)}
+  .adv .ic.chk{color:#3ee6a0;background:rgba(62,230,160,.08);border-color:rgba(62,230,160,.25)}
+
+  html[dir="rtl"] .lang-opt,html[dir="rtl"] label{text-align:right}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:36px}
+    .adv-grid{grid-template-columns:1fr}
+    .spot{grid-template-columns:1fr;gap:34px}
+    header{padding:130px 0 70px;min-height:auto}
+    section{padding:80px 0}
+    .row{grid-template-columns:1fr}
+    .scrollcue{display:none}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 18px}
+    nav{padding:14px 0}
+    .brand small{display:none}
+    .hero-title{font-size:clamp(2.6rem,15vw,4rem)}
+    header{padding:116px 0 60px}
+    .card{padding:28px 22px}
+    .sec-title{font-size:clamp(1.7rem,8vw,2.4rem)}
+    .modal{padding:26px 20px}
+    .lang-menu{grid-template-columns:1fr;min-width:150px}
+    .adv{padding:26px 22px}
+    .final h2{font-size:clamp(2rem,11vw,3rem)}
+    .marquee span{font-size:clamp(1.4rem,8vw,2rem)}
+  }
+</style>
+</head>
+<body>
+  <div class="bg-fx"><div class="orb v"></div><div class="orb b"></div><div class="orb c"></div></div>
+  <div class="grid-fx"></div>
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="wrap nav-in">
+      <div class="brand" data-mag>
+        <span class="dot"></span>
+        <span>bydautoasia.com <small data-i18n="badge_nav">Premium Domain</small></span>
+      </div>
+      <div class="lang" id="lang">
+        <button class="lang-btn" id="langBtn" data-mag aria-label="Language">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg>
+          <span id="langCur">EN</span>
+          <svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" id="langMenu"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header>
+    <div class="hero-bg"><img src="https://static.prod-images.emergentagent.com/jobs/1a241cfa-c3ae-4786-b7e8-804a6137d86a/images/7652e12fa4c87229a423010fbbb005ba0e485d2cbd356daa244edd4c5e2e890f.jpeg" alt="Futuristic eco city with heavy traffic" /></div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="badge" data-reveal><i></i><span data-i18n="badge">Premium Domain · For Sale</span></span>
+        <h1 class="hero-title">
+          <span class="line-mask"><span id="t1">BYDAUTOASIA</span></span>
+          <span class="line-mask"><span class="gr" id="t2">.COM</span></span>
+        </h1>
+        <p class="hero-forsale" data-reveal data-i18n="hero_forsale">This premium domain is for sale — make your offer.</p>
+        <p class="hero-sub" data-reveal data-i18n="hero_sub">A rare, category-defining name for the automotive world — built on the world's most trusted global .COM extension.</p>
+      </div>
+      <div class="card" data-reveal>
+        <div class="k" data-i18n="card_kicker">Acquire the domain</div>
+        <h3 data-i18n="card_line">One name. Endless velocity.</h3>
+        <div class="cnote">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span data-i18n="card_note">Confidential process · Secure escrow transfer available</span>
+        </div>
+        <div class="offers"><span class="pulse"></span><b id="offersCount">24</b>&nbsp;<span data-i18n="offers_label">offers already received</span></div>
+        <button class="cta" data-open data-mag data-i18n="cta">📩 Make an offer</button>
+      </div>
+    </div>
+    <div class="scrollcue" data-reveal><span class="m"></span><span data-i18n="scroll">Scroll to explore</span></div>
+  </header>
+
+  <!-- ADVANTAGES -->
+  <section>
+    <div class="wrap">
+      <div class="kicker" data-reveal data-i18n="adv_kicker">Why this domain</div>
+      <h2 class="sec-title" data-reveal data-i18n="adv_title">Four reasons it moves fast</h2>
+      <div class="adv-grid">
+        <div class="adv" data-reveal>
+          <span class="no">01</span>
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"/></svg></div>
+          <h3 data-i18n="adv1_t">.COM Extension</h3>
+          <p data-i18n="adv1_d">The world's most trusted global extension — instant credibility and recognition across Asia and beyond.</p>
+        </div>
+        <div class="adv" data-reveal>
+          <span class="no">02</span>
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div>
+          <h3 data-i18n="adv2_t">Short & Memorable</h3>
+          <p data-i18n="adv2_d">Clean, brandable and effortless to recall, type and share across any channel.</p>
+        </div>
+        <div class="adv" data-reveal>
+          <span class="no">03</span>
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13m-14 0h14m-14 0v4h2v-2m10 2h2v-4m-2 4v-2"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg></div>
+          <h3 data-i18n="adv3_t">Automotive Ready</h3>
+          <p data-i18n="adv3_d">Purpose-built for cars, EV, dealerships and mobility ventures targeting the Asian market.</p>
+        </div>
+        <div class="adv" data-reveal>
+          <span class="no">04</span>
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3 data-i18n="adv4_t">Secure Transfer</h3>
+          <p data-i18n="adv4_d">Protected, escrow-backed handover with full ownership transferred to you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section>
+    <div class="wrap statement">
+      <div class="kicker" data-reveal data-i18n="spot_kicker">The opportunity</div>
+      <h2 class="sec-title" data-reveal data-i18n="spot_title">A name that drives markets</h2>
+      <p class="sec-lead" data-reveal data-i18n="spot_text">BYDAUTOASIA.COM fuses a powerful automotive identity with the credibility of the global .COM namespace. Position your brand at the center of the world's fastest-growing mobility market — Asia.</p>
+    </div>
+  </section>
+
+  <!-- SEO / WHY THIS DOMAIN -->
+  <section>
+    <div class="wrap">
+      <div class="kicker" data-reveal data-i18n="seo_kicker">SEO advantage</div>
+      <h2 class="sec-title" data-reveal data-i18n="seo_title">Built to rank on Google</h2>
+      <p class="sec-lead" data-reveal data-i18n="seo_intro">A domain is more than a name — it's an SEO asset. BYDAUTOASIA.COM is engineered for visibility.</p>
+      <div class="adv-grid">
+        <div class="adv" data-reveal>
+          <span class="no">01</span>
+          <div class="ic chk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <h3 data-i18n="seo1_t">Global .COM ranking</h3>
+          <p data-i18n="seo1_d">Search engines trust .COM as the universal standard, delivering credibility and ranking power across all Asian markets from day one.</p>
+        </div>
+        <div class="adv" data-reveal>
+          <span class="no">02</span>
+          <div class="ic chk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <h3 data-i18n="seo2_t">High-intent keyword</h3>
+          <p data-i18n="seo2_d">Auto is among the most searched commercial terms worldwide — instant topical relevance.</p>
+        </div>
+        <div class="adv" data-reveal>
+          <span class="no">03</span>
+          <div class="ic chk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 22l5-3 5 3-1.5-9.5"/></svg></div>
+          <h3 data-i18n="seo3_t">Exact-match authority</h3>
+          <p data-i18n="seo3_d">A short, keyword-rich domain earns trust and higher click-through straight from the search page.</p>
+        </div>
+        <div class="adv" data-reveal>
+          <span class="no">04</span>
+          <div class="ic chk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4l7 16 2.5-6.5L20 11z"/></svg></div>
+          <h3 data-i18n="seo4_t">Direct type-in traffic</h3>
+          <p data-i18n="seo4_d">Memorable names get typed directly into the browser, driving free, recurring visits without ad spend.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap">
+      <h2 data-reveal>Own <span class="gr">BYDAUTOASIA.COM</span></h2>
+      <p data-reveal data-i18n="final_sub">Serious inquiries only. Submit your offer and we'll respond promptly.</p>
+      <button class="cta" data-open data-mag data-i18n="final_cta">📩 Make an offer</button>
+    </div>
+  </section>
+
+  <!-- OFFER FORM — inline section -->
+  <section class="offer-sec" id="offer">
+    <div class="modal" data-reveal>
+      <div class="top-accent"></div>
+      <div id="formView">
+        <h3 data-i18n="modal_title">Make an offer</h3>
+        <p class="msub" data-i18n="modal_sub">Tell us about you and your proposal. We reply to every serious offer.</p>
+        <form id="offerForm">
+          <div class="row">
+            <div class="field"><label data-i18n="f_name">Full name</label><input type="text" name="name" required /></div>
+            <div class="field"><label data-i18n="f_email">Email</label><input type="email" name="email" required /></div>
+          </div>
+          <div class="row">
+            <div class="field"><label data-i18n="f_phone">Phone</label><input type="tel" name="phone" /></div>
+            <div class="field"><label data-i18n="f_company">Company (optional)</label><input type="text" name="company" /></div>
+          </div>
+          <div class="field"><label data-i18n="f_amount">Your offer (USD)</label><input type="number" name="amount" min="1" step="any" required placeholder="25000" data-ph="f_amount_ph" /></div>
+          <div class="ridicule">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
+            <span data-i18n="ridicule">Please submit a serious proposal — unreasonable or lowball offers will not be considered.</span>
+          </div>
+          <div class="field"><label data-i18n="f_message">Message</label><textarea name="message" data-ph="f_message_ph" placeholder="Share your intended use or any questions…"></textarea></div>
+          <button type="submit" class="cta" id="submitBtn" data-i18n="submit">Submit offer</button>
+          <div class="formerr" id="formerr" data-i18n="error_text">Something went wrong. Please try again or email us directly.</div>
+        </form>
+        <div class="modal-trust">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
+          Confidential · Secure escrow · Reply within 24 h
+        </div>
+      </div>
+      <div class="success" id="successView">
+        <div class="tick"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3 data-i18n="success_title">Offer received</h3>
+        <p data-i18n="success_text">Thank you. Your offer has been sent successfully. We'll get back to you by email soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap"><span data-i18n="footer">© 2026 bydautoasia.com — All rights reserved.</span></div>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+/* ============================================================
+   ⚙️  CONFIG — replace with YOUR Web3Forms access key.
+   The recipient email (mongarminvivo@gmail.com) is tied to
+   this key on web3forms.com and is NEVER visible to visitors.
+   Get a free key at https://web3forms.com (free tier: 250/mo).
+   ============================================================ */
+const WEB3FORMS_ACCESS_KEY = "e8cc8f60-e3ff-4cc3-ae66-70f3518c2910";
+
+/* verification helper: ?static renders final state instantly (animations untouched for real users) */
+const STATIC = new URLSearchParams(location.search).has('static');
+if(STATIC) document.documentElement.classList.add('static');
+
+/* ---------------- i18n ---------------- */
+const I18N = {
+  en:{name:"English",flag:"🇬🇧",badge_nav:"Premium Domain",badge:"Premium Domain · For Sale",hero_sub:"A rare, category-defining name for the automotive world — built on the world's most trusted global .COM extension.",card_kicker:"Acquire the domain",card_line:"One name. Endless velocity.",card_note:"Confidential process · Secure escrow transfer available",cta:"📩 Make an offer",scroll:"Scroll to explore",adv_kicker:"Why this domain",adv_title:"Four reasons it moves fast",adv1_t:".COM Extension",adv1_d:"The world's most trusted global extension — instant credibility and recognition across Asia and beyond.",adv2_t:"Short & Memorable",adv2_d:"Clean, brandable and effortless to recall, type and share across any channel.",adv3_t:"Automotive Ready",adv3_d:"Purpose-built for cars, EV, dealerships and mobility ventures targeting the Asian market.",adv4_t:"Secure Transfer",adv4_d:"Protected, escrow-backed handover with full ownership transferred to you.",spot_tag:"Automotive · Mobility · EV",spot_kicker:"The opportunity",spot_title:"A name that drives markets",spot_text:"BYDAUTOASIA.COM fuses a powerful automotive identity with the credibility of the global .COM namespace. Position your brand at the center of the world's fastest-growing mobility market — Asia.",final_sub:"Serious inquiries only. Submit your offer and we'll respond promptly.",final_cta:"📩 Make an offer",footer:"© 2026 bydautoasia.com — All rights reserved.",modal_title:"Make an offer",modal_sub:"Tell us about you and your proposal. We reply to every serious offer.",f_name:"Full name",f_email:"Email",f_phone:"Phone",f_company:"Company (optional)",f_amount:"Your offer (USD)",f_amount_ph:"e.g. 25000",f_message:"Message",f_message_ph:"Share your intended use or any questions…",ridicule:"Please submit a serious proposal — unreasonable or lowball offers will not be considered.",submit:"Submit offer",sending:"Sending…",success_title:"Offer received",success_text:"Thank you. Your offer has been sent successfully. We'll get back to you by email soon.",error_text:"Something went wrong. Please try again or email us directly.",hero_forsale:"This premium domain is for sale — make your offer.",offers_label:"offers already received",seo_kicker:"SEO advantage",seo_title:"Built to rank on Google",seo_intro:"A domain is more than a name — it's an SEO asset. BYDAUTOASIA.COM is engineered for visibility.",seo1_t:"Global .COM ranking",seo1_d:"Search engines trust .COM as the universal standard, delivering credibility and ranking power across all Asian markets from day one.",seo2_t:"High-intent keyword",seo2_d:"Auto is among the most searched commercial terms worldwide — instant topical relevance.",seo3_t:"Exact-match authority",seo3_d:"A short, keyword-rich domain earns trust and higher click-through straight from the search page.",seo4_t:"Direct type-in traffic",seo4_d:"Memorable names get typed directly into the browser, driving free, recurring visits without ad spend."},
+  fr:{name:"Français",flag:"🇫🇷",badge_nav:"Domaine Premium",badge:"Domaine Premium · À vendre",hero_sub:"Un nom rare et emblématique pour l'univers automobile — bâti sur l'extension mondiale la plus fiable, le .COM.",card_kicker:"Acquérir le domaine",card_line:"Un nom. Une vitesse infinie.",card_note:"Processus confidentiel · Transfert sécurisé sous séquestre",cta:"📩 Faire une offre",scroll:"Défiler pour explorer",adv_kicker:"Pourquoi ce domaine",adv_title:"Quatre raisons de foncer",adv1_t:"Extension .COM",adv1_d:"L'extension mondiale la plus fiable — crédibilité et reconnaissance instantanées en Asie et au-delà.",adv2_t:"Court & Mémorable",adv2_d:"Épuré, facile à retenir, à taper et à partager sur tous les canaux.",adv3_t:"Prêt pour l'automobile",adv3_d:"Conçu pour l'automobile, les VE, les concessions et la mobilité sur le marché asiatique.",adv4_t:"Transfert sécurisé",adv4_d:"Remise protégée sous séquestre avec transfert complet de propriété.",spot_tag:"Automobile · Mobilité · VE",spot_kicker:"L'opportunité",spot_title:"Un nom qui fait bouger les marchés",spot_text:"BYDAUTOASIA.COM fusionne une identité automobile puissante avec la crédibilité du namespace .COM mondial. Placez votre marque au cœur du marché de la mobilité le plus dynamique au monde — l'Asie.",final_sub:"Demandes sérieuses uniquement. Envoyez votre offre, nous répondons rapidement.",final_cta:"📩 Faire une offre",footer:"© 2026 bydautoasia.com — Tous droits réservés.",modal_title:"Faire une offre",modal_sub:"Parlez-nous de vous et de votre proposition. Nous répondons à chaque offre sérieuse.",f_name:"Nom complet",f_email:"E-mail",f_phone:"Téléphone",f_company:"Entreprise (optionnel)",f_amount:"Votre offre (USD)",f_amount_ph:"ex. 25000",f_message:"Message",f_message_ph:"Décrivez votre usage prévu ou vos questions…",ridicule:"Merci de soumettre une proposition sérieuse — les offres dérisoires ne seront pas considérées.",submit:"Soumettre l'offre",sending:"Envoi…",success_title:"Offre reçue",success_text:"Merci. Votre offre a bien été envoyée. Nous reviendrons vers vous par e-mail très bientôt.",error_text:"Une erreur est survenue. Réessayez ou contactez-nous par e-mail.",hero_forsale:"Ce domaine premium est à vendre — faites votre offre.",offers_label:"offres déjà reçues",seo_kicker:"Avantage SEO",seo_title:"Conçu pour se classer sur Google",seo_intro:"Un domaine, c'est plus qu'un nom — c'est un atout SEO. BYDAUTOASIA.COM est pensé pour la visibilité.",seo1_t:"Référencement mondial .COM",seo1_d:"Les moteurs de recherche font confiance au .COM comme standard universel, offrant crédibilité et puissance de classement sur tous les marchés asiatiques dès le départ.",seo2_t:"Mot-clé à forte intention",seo2_d:"Auto est l'un des termes commerciaux les plus recherchés au monde — pertinence thématique immédiate.",seo3_t:"Autorité de correspondance exacte",seo3_d:"Un domaine court et riche en mots-clés inspire confiance et augmente le taux de clic depuis la recherche.",seo4_t:"Trafic direct (type-in)",seo4_d:"Les noms mémorables sont tapés directement dans le navigateur — des visites récurrentes et gratuites."},
+  zh:{name:"中文",flag:"🇨🇳",badge_nav:"高端域名",badge:"高端域名 · 出售中",hero_sub:"一个稀有且极具辨识度的汽车行业域名 —— 建立在全球最可信的 .COM 后缀之上。",card_kicker:"获取该域名",card_line:"一个名字，无限速度。",card_note:"保密流程 · 提供安全托管过户",cta:"📩 提交报价",scroll:"向下滚动探索",adv_kicker:"为何选择此域名",adv_title:"四大理由，抢手快售",adv1_t:".COM 后缀",adv1_d:"全球最可信的后缀 —— 在亚洲及全球范围内即刻获得信誉与认可。",adv2_t:"简短易记",adv2_d:"简洁、易于品牌化，便于记忆、输入并在各渠道传播。",adv3_t:"汽车行业专属",adv3_d:"专为汽车、电动车、经销商及亚洲市场出行业务打造。",adv4_t:"安全过户",adv4_d:"受保护的托管交接，完整所有权转移至您名下。",spot_tag:"汽车 · 出行 · 电动车",spot_kicker:"商机所在",spot_title:"一个撬动市场的名字",spot_text:"BYDAUTOASIA.COM 将强大的汽车品牌形象与全球 .COM 域名的公信力融为一体。让您的品牌立于全球增长最快的出行市场中心 —— 亚洲。",final_sub:"仅限诚意咨询。提交您的报价，我们将尽快回复。",final_cta:"📩 提交报价",footer:"© 2026 bydautoasia.com — 版权所有。",modal_title:"提交报价",modal_sub:"请介绍您自己及您的方案。我们会回复每一份诚意报价。",f_name:"姓名",f_email:"邮箱",f_phone:"电话",f_company:"公司（选填）",f_amount:"您的报价（美元）",f_amount_ph:"例如 25000",f_message:"留言",f_message_ph:"请说明用途或任何疑问…",ridicule:"请提交诚意报价 —— 不合理的低价报价将不予考虑。",submit:"提交报价",sending:"发送中…",success_title:"报价已收到",success_text:"感谢您。您的报价已成功发送，我们将尽快通过邮件与您联系。",error_text:"出现错误，请重试或直接发邮件给我们。",hero_forsale:"此高端域名正在出售 —— 立即报价。",offers_label:"份报价已收到",seo_kicker:"SEO 优势",seo_title:"为谷歌排名而生",seo_intro:"域名不仅是名字，更是 SEO 资产。BYDAUTOASIA.COM 为曝光而打造。",seo1_t:"全球 .COM 排名",seo1_d:"搜索引擎信任 .COM 作为全球标准，从第一天起即为所有亚洲市场提供信誉和排名能力。",seo2_t:"高意向关键词",seo2_d:"auto 是全球搜索量最高的商业词之一 —— 天然具备主题相关性。",seo3_t:"精准匹配权重",seo3_d:"简短且富含关键词的域名更受信任，直接提升搜索点击率。",seo4_t:"直接输入流量",seo4_d:"易记的名字会被直接输入浏览器，带来免费且持续的访问。"},
+  ja:{name:"日本語",flag:"🇯🇵",badge_nav:"プレミアムドメイン",badge:"プレミアムドメイン · 販売中",hero_sub:"自動車業界を象徴する希少なネーム。世界で最も信頼される .COM 拡張子上に構築。",card_kicker:"ドメインを取得",card_line:"ひとつの名前、無限の速度。",card_note:"機密プロセス · 安全なエスクロー譲渡に対応",cta:"📩 オファーを送る",scroll:"スクロールで探索",adv_kicker:"このドメインの理由",adv_title:"早く売れる4つの理由",adv1_t:".COM 拡張子",adv1_d:"世界で最も信頼される拡張子。アジア全域で即座に信頼性と認知度を獲得。",adv2_t:"短く覚えやすい",adv2_d:"洗練されブランド化しやすく、記憶・入力・共有が容易。",adv3_t:"自動車向け",adv3_d:"自動車・EV・ディーラー・アジア市場のモビリティ事業に最適。",adv4_t:"安全な譲渡",adv4_d:"エスクローによる保護された引き渡しで、完全な所有権を移転。",spot_tag:"自動車 · モビリティ · EV",spot_kicker:"チャンス",spot_title:"市場を動かす名前",spot_text:"BYDAUTOASIA.COM は力強い自動車ブランドとグローバル .COM の信頼性を融合。世界で最も成長するモビリティ市場 — アジアの中心にブランドを据えます。",final_sub:"真剣なお問い合わせのみ。オファーを送信いただければ速やかに対応します。",final_cta:"📩 オファーを送る",footer:"© 2026 bydautoasia.com — 無断転載を禁じます。",modal_title:"オファーを送る",modal_sub:"あなたとご提案についてお知らせください。真剣なオファーには必ず返信します。",f_name:"氏名",f_email:"メール",f_phone:"電話",f_company:"会社（任意）",f_amount:"ご提示額（USD）",f_amount_ph:"例：25000",f_message:"メッセージ",f_message_ph:"用途やご質問をお書きください…",ridicule:"真剣なご提案をお願いします。不当な低額オファーは考慮されません。",submit:"オファーを送信",sending:"送信中…",success_title:"オファーを受領しました",success_text:"ありがとうございます。オファーは正常に送信されました。追ってメールでご連絡します。",error_text:"エラーが発生しました。再試行するか直接メールしてください。",hero_forsale:"このプレミアムドメインは販売中です — オファーをどうぞ。",offers_label:"件のオファーを受領済み",seo_kicker:"SEO の強み",seo_title:"Google 上位表示のために設計",seo_intro:"ドメインは名前以上に SEO 資産です。BYDAUTOASIA.COM は露出のために設計されています。",seo1_t:"グローバル .COM 順位",seo1_d:"検索エンジンは .COM を世界標準として信頼し、初日からアジア全市場で信頼性と順位能力を提供。",seo2_t:"高意図キーワード",seo2_d:"auto は世界で最も検索される商業ワードの一つ。即座にトピック関連性を獲得。",seo3_t:"完全一致の権威性",seo3_d:"短くキーワード豊富なドメインは信頼を得て、検索からのクリック率を高めます。",seo4_t:"ダイレクト流入",seo4_d:"覚えやすい名前はブラウザに直接入力され、無料で繰り返し訪問を生みます。"},
+  ar:{name:"العربية",flag:"🇦🇪",badge_nav:"نطاق مميز",badge:"نطاق مميز · للبيع",hero_sub:"اسم نادر ومميّز لعالم السيارات — مبني على أكثر الامتدادات العالمية ثقة، .COM.",card_kicker:"احصل على النطاق",card_line:"اسم واحد. سرعة لا حدود لها.",card_note:"عملية سرّية · نقل آمن عبر الضمان",cta:"📩 قدّم عرضاً",scroll:"مرّر للاستكشاف",adv_kicker:"لماذا هذا النطاق",adv_title:"أربعة أسباب لسرعة البيع",adv1_t:"امتداد .COM",adv1_d:"الامتداد العالمي الأكثر ثقة — مصداقية واعتراف فوري في آسيا وخارجها.",adv2_t:"قصير وسهل التذكّر",adv2_d:"نظيف وقابل للعلامة التجارية وسهل التذكّر والكتابة والمشاركة عبر أي قناة.",adv3_t:"جاهز لقطاع السيارات",adv3_d:"مصمّم للسيارات والمركبات الكهربائية والوكلاء ومشاريع التنقّل في السوق الآسيوي.",adv4_t:"نقل آمن",adv4_d:"تسليم محميّ عبر الضمان مع نقل الملكية الكاملة إليك.",spot_tag:"سيارات · تنقّل · كهربائية",spot_kicker:"الفرصة",spot_title:"اسم يحرّك الأسواق",spot_text:"يدمج BYDAUTOASIA.COM هوية سيارات قوية مع مصداقية نطاق .COM العالمي. ضع علامتك في قلب أسرع أسواق التنقّل نمواً في العالم — آسيا.",final_sub:"الاستفسارات الجادة فقط. أرسل عرضك وسنردّ بسرعة.",final_cta:"📩 قدّم عرضاً",footer:"© 2026 bydautoasia.com — جميع الحقوق محفوظة.",modal_title:"قدّم عرضاً",modal_sub:"أخبرنا عنك وعن عرضك. نردّ على كل عرض جادّ.",f_name:"الاسم الكامل",f_email:"البريد الإلكتروني",f_phone:"الهاتف",f_company:"الشركة (اختياري)",f_amount:"عرضك (دولار)",f_amount_ph:"مثال: 25000",f_message:"رسالة",f_message_ph:"اذكر الاستخدام المقصود أو أي أسئلة…",ridicule:"يرجى تقديم عرض جادّ — لن يُنظر في العروض غير المعقولة أو المتدنّية.",submit:"إرسال العرض",sending:"جارٍ الإرسال…",success_title:"تم استلام العرض",success_text:"شكراً لك. تم إرسال عرضك بنجاح. سنتواصل معك عبر البريد قريباً.",error_text:"حدث خطأ ما. حاول مجدداً أو راسلنا مباشرة.",hero_forsale:"هذا النطاق المميّز معروض للبيع — قدّم عرضك.",offers_label:"عروض تم استلامها بالفعل",seo_kicker:"ميزة SEO",seo_title:"مصمّم للتصدّر على جوجل",seo_intro:"النطاق أكثر من مجرد اسم — إنه أصل لتحسين محركات البحث. BYDAUTOASIA.COM مبني للظهور.",seo1_t:"ترتيب عالمي لـ .COM",seo1_d:"تثق محركات البحث بـ .COM كمعيار عالمي، مما يوفر المصداقية وقوة الترتيب عبر جميع الأسواق الآسيوية منذ اليوم الأول.",seo2_t:"كلمة مفتاحية عالية النيّة",seo2_d:"كلمة auto من أكثر المصطلحات التجارية بحثاً عالمياً — صلة موضوعية فورية.",seo3_t:"سلطة المطابقة التامة",seo3_d:"نطاق قصير غني بالكلمات المفتاحية يكسب الثقة ويرفع نسبة النقر من نتائج البحث.",seo4_t:"زيارات مباشرة",seo4_d:"الأسماء التي تُحفظ بسهولة تُكتب مباشرة في المتصفح، مما يحقق زيارات مجانية متكررة."},
+  es:{name:"Español",flag:"🇪🇸",badge_nav:"Dominio Premium",badge:"Dominio Premium · En venta",hero_sub:"Un nombre raro y emblemático para el mundo del automóvil — sobre la extensión global más confiable del mundo, el .COM.",card_kicker:"Adquiere el dominio",card_line:"Un nombre. Velocidad infinita.",card_note:"Proceso confidencial · Transferencia segura con depósito",cta:"📩 Hacer una oferta",scroll:"Desplázate para explorar",adv_kicker:"Por qué este dominio",adv_title:"Cuatro razones para no esperar",adv1_t:"Extensión .COM",adv1_d:"La extensión global más confiable del mundo — credibilidad y reconocimiento instantáneos en Asia y más allá.",adv2_t:"Corto y Memorable",adv2_d:"Limpio, apto para marca y fácil de recordar, escribir y compartir en cualquier canal.",adv3_t:"Listo para el automóvil",adv3_d:"Pensado para autos, VE, concesionarios y movilidad en el mercado asiático.",adv4_t:"Transferencia segura",adv4_d:"Entrega protegida con depósito y transferencia total de propiedad hacia ti.",spot_tag:"Automóvil · Movilidad · VE",spot_kicker:"La oportunidad",spot_title:"Un nombre que mueve mercados",spot_text:"BYDAUTOASIA.COM une una identidad automotriz potente con la credibilidad del espacio global .COM. Sitúa tu marca en el centro del mercado de movilidad de mayor crecimiento del mundo — Asia.",final_sub:"Solo consultas serias. Envía tu oferta y responderemos pronto.",final_cta:"📩 Hacer una oferta",footer:"© 2026 bydautoasia.com — Todos los derechos reservados.",modal_title:"Hacer una oferta",modal_sub:"Cuéntanos sobre ti y tu propuesta. Respondemos a cada oferta seria.",f_name:"Nombre completo",f_email:"Correo",f_phone:"Teléfono",f_company:"Empresa (opcional)",f_amount:"Tu oferta (USD)",f_amount_ph:"ej. 25000",f_message:"Mensaje",f_message_ph:"Cuéntanos el uso previsto o tus preguntas…",ridicule:"Envía una propuesta seria — las ofertas irrisorias no serán consideradas.",submit:"Enviar oferta",sending:"Enviando…",success_title:"Oferta recibida",success_text:"Gracias. Tu oferta se envió correctamente. Te contactaremos por correo muy pronto.",error_text:"Algo salió mal. Inténtalo de nuevo o escríbenos directamente.",hero_forsale:"Este dominio premium está en venta — haz tu oferta.",offers_label:"ofertas ya recibidas",seo_kicker:"Ventaja SEO",seo_title:"Diseñado para posicionar en Google",seo_intro:"Un dominio es más que un nombre — es un activo SEO. BYDAUTOASIA.COM está pensado para la visibilidad.",seo1_t:"Posicionamiento global .COM",seo1_d:"Los buscadores confían en .COM como el estándar universal, ofreciendo credibilidad y poder de ranking en todos los mercados asiáticos desde el primer día.",seo2_t:"Palabra clave de alta intención",seo2_d:"Auto es uno de los términos comerciales más buscados del mundo — relevancia temática inmediata.",seo3_t:"Autoridad de coincidencia exacta",seo3_d:"Un dominio corto y rico en palabras clave genera confianza y más clics desde la búsqueda.",seo4_t:"Tráfico directo (type-in)",seo4_d:"Los nombres memorables se escriben directo en el navegador, generando visitas gratuitas y recurrentes."},
+  ru:{name:"Русский",flag:"🇷🇺",badge_nav:"Премиум-домен",badge:"Премиум-домен · Продаётся",hero_sub:"Редкое, знаковое имя для автомобильного мира — на самом надёжном мировом домене .COM.",card_kicker:"Приобрести домен",card_line:"Одно имя. Бесконечная скорость.",card_note:"Конфиденциально · Безопасная передача через эскроу",cta:"📩 Сделать предложение",scroll:"Прокрутите вниз",adv_kicker:"Почему этот домен",adv_title:"Четыре причины действовать быстро",adv1_t:"Расширение .COM",adv1_d:"Самое надёжное мировое расширение — мгновенная доверие и признание в Азии и за её пределами.",adv2_t:"Короткий и запоминающийся",adv2_d:"Чистый, брендируемый, легко запоминается, вводится и распространяется.",adv3_t:"Готов для автоиндустрии",adv3_d:"Создан для авто, электромобилей, дилеров и мобильности на азиатском рынке.",adv4_t:"Безопасная передача",adv4_d:"Защищённая передача через эскроу с полным переходом прав к вам.",spot_tag:"Авто · Мобильность · Электро",spot_kicker:"Возможность",spot_title:"Имя, что движет рынками",spot_text:"BYDAUTOASIA.COM объединяет мощную автомобильную идентичность с доверием глобального домена .COM. Поставьте бренд в центр самого быстрорастущего рынка мобильности в мире — Азии.",final_sub:"Только серьёзные запросы. Отправьте предложение — мы ответим оперативно.",final_cta:"📩 Сделать предложение",footer:"© 2026 bydautoasia.com — Все права защищены.",modal_title:"Сделать предложение",modal_sub:"Расскажите о себе и вашем предложении. Мы отвечаем на каждое серьёзное предложение.",f_name:"Полное имя",f_email:"Эл. почта",f_phone:"Телефон",f_company:"Компания (необязательно)",f_amount:"Ваше предложение (USD)",f_amount_ph:"напр. 25000",f_message:"Сообщение",f_message_ph:"Опишите предполагаемое использование или вопросы…",ridicule:"Пожалуйста, отправьте серьёзное предложение — необоснованно низкие не рассматриваются.",submit:"Отправить предложение",sending:"Отправка…",success_title:"Предложение получено",success_text:"Спасибо. Ваше предложение успешно отправлено. Мы свяжемся с вами по эл. почте.",error_text:"Что-то пошло не так. Повторите попытку или напишите нам напрямую.",hero_forsale:"Этот премиум-домен продаётся — сделайте предложение.",offers_label:"предложений уже получено",seo_kicker:"Преимущество SEO",seo_title:"Создан для топа в Google",seo_intro:"Домен — это больше, чем имя, это SEO-актив. BYDAUTOASIA.COM создан для видимости.",seo1_t:"Глобальное ранжирование .COM",seo1_d:"Поисковики доверяют .COM как мировому стандарту, обеспечивая доверие и силу ранжирования на всех азиатских рынках с первого дня.",seo2_t:"Ключевое слово с высоким интентом",seo2_d:"Auto — один из самых искомых коммерческих терминов в мире, мгновенная тематическая релевантность.",seo3_t:"Авторитет точного совпадения",seo3_d:"Короткий домен, богатый ключевыми словами, вызывает доверие и повышает кликабельность из поиска.",seo4_t:"Прямой трафик (type-in)",seo4_d:"Запоминающиеся имена вводят прямо в браузере — бесплатные и повторяющиеся визиты."},
+  tr:{name:"Türkçe",flag:"🇹🇷",badge_nav:"Premium Alan Adı",badge:"Premium Alan Adı · Satılık",hero_sub:"Otomotiv dünyası için nadir, kategori belirleyen bir isim — dünyanın en güvenilir küresel uzantısı .COM üzerine kurulu.",card_kicker:"Alan adını edinin",card_line:"Tek isim. Sonsuz hız.",card_note:"Gizli süreç · Güvenli emanet ile devir",cta:"📩 Teklif ver",scroll:"Keşfetmek için kaydırın",adv_kicker:"Neden bu alan adı",adv_title:"Hızla el değiştirmesinin dört nedeni",adv1_t:".COM Uzantısı",adv1_d:"Dünyanın en güvenilir küresel uzantısı — Asya genelinde ve ötesinde anında güvenilirlik ve tanınma.",adv2_t:"Kısa ve Akılda Kalıcı",adv2_d:"Sade, markalaşmaya uygun; hatırlaması, yazması ve paylaşması kolay.",adv3_t:"Otomotive Hazır",adv3_d:"Otomobil, EV, bayiler ve Asya pazarına yönelik mobilite girişimleri için ideal.",adv4_t:"Güvenli Devir",adv4_d:"Emanet destekli korumalı teslim ile tam mülkiyet size devredilir.",spot_tag:"Otomotiv · Mobilite · EV",spot_kicker:"Fırsat",spot_title:"Pazarları hareket ettiren bir isim",spot_text:"BYDAUTOASIA.COM güçlü bir otomotiv kimliğini küresel .COM alan adının güvenilirliğiyle birleştirir. Markanızı dünyanın en hızlı büyüyen mobilite pazarının merkezine konumlandırın — Asya.",final_sub:"Yalnızca ciddi talepler. Teklifinizi gönderin, hızla yanıtlayalım.",final_cta:"📩 Teklif ver",footer:"© 2026 bydautoasia.com — Tüm hakları saklıdır.",modal_title:"Teklif ver",modal_sub:"Kendinizden ve teklifinizden bahsedin. Her ciddi teklife yanıt veriyoruz.",f_name:"Ad Soyad",f_email:"E-posta",f_phone:"Telefon",f_company:"Şirket (isteğe bağlı)",f_amount:"Teklifiniz (USD)",f_amount_ph:"örn. 25000",f_message:"Mesaj",f_message_ph:"Kullanım amacınızı veya sorularınızı yazın…",ridicule:"Lütfen ciddi bir teklif gönderin — mantıksız veya çok düşük teklifler dikkate alınmaz.",submit:"Teklifi gönder",sending:"Gönderiliyor…",success_title:"Teklif alındı",success_text:"Teşekkürler. Teklifiniz başarıyla gönderildi. En kısa sürede e-posta ile döneceğiz.",error_text:"Bir şeyler ters gitti. Tekrar deneyin veya doğrudan e-posta gönderin.",hero_forsale:"Bu premium alan adı satılıktır — teklifinizi verin.",offers_label:"teklif zaten alındı",seo_kicker:"SEO avantajı",seo_title:"Google'da üst sıralar için tasarlandı",seo_intro:"Alan adı bir isimden fazlasıdır — bir SEO varlığıdır. BYDAUTOASIA.COM görünürlük için tasarlandı.",seo1_t:"Küresel .COM sıralama",seo1_d:"Arama motorları .COM'u evrensel standart olarak güvenir, ilk günden tüm Asya pazarlarında güvenilirlik ve sıralama gücü sağlar.",seo2_t:"Yüksek niyetli anahtar kelime",seo2_d:"Auto, dünyada en çok aranan ticari terimlerden biridir — anında konu ilgisi.",seo3_t:"Tam eşleşme otoritesi",seo3_d:"Kısa ve anahtar kelime açısından zengin bir alan adı güven kazandırır ve aramadan tıklamayı artırır.",seo4_t:"Doğrudan (type-in) trafik",seo4_d:"Akılda kalıcı isimler tarayıcıya doğrudan yazılır; ücretsiz ve tekrarlayan ziyaretler sağlar."}
+};
+const RTL = ["ar"];
+const ORDER = ["en","fr","zh","ja","ar","es","ru","tr"];
+const CODES = {en:"EN",fr:"FR",zh:"ZH",ja:"JA",ar:"AR",es:"ES",ru:"RU",tr:"TR"};
+
+/* build lang menu */
+const langMenu = document.getElementById('langMenu');
+ORDER.forEach(code=>{
+  const b=document.createElement('button');
+  b.className='lang-opt';b.dataset.code=code;
+  b.innerHTML=`<span class="fl">${I18N[code].flag}</span><span>${I18N[code].name}</span>`;
+  b.addEventListener('click',()=>{setLang(code);closeLang();});
+  langMenu.appendChild(b);
+});
+
+function setLang(code){
+  const t=I18N[code];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(t[k]!==undefined) el.textContent=t[k];
+  });
+  document.querySelectorAll('[data-ph]').forEach(el=>{
+    const k=el.getAttribute('data-ph');
+    if(t[k]!==undefined) el.setAttribute('placeholder',t[k]);
+  });
+  document.getElementById('langCur').textContent=CODES[code];
+  document.querySelectorAll('.lang-opt').forEach(o=>o.classList.toggle('active',o.dataset.code===code));
+  const html=document.documentElement;
+  html.lang=code;
+  html.dir=RTL.includes(code)?'rtl':'ltr';
+  buildMarquee(t);
+  localStorage.setItem('bydautoasia_lang',code);
+}
+function detectLang(){
+  const q=new URLSearchParams(location.search).get('lang');
+  if(q&&I18N[q]) return q;
+  const saved=localStorage.getItem('bydautoasia_lang');
+  if(saved&&I18N[saved]) return saved;
+  const nav=(navigator.language||'en').slice(0,2).toLowerCase();
+  return I18N[nav]?nav:'en';
+}
+
+/* language dropdown toggle */
+const lang=document.getElementById('lang');
+document.getElementById('langBtn').addEventListener('click',e=>{e.stopPropagation();lang.classList.toggle('open');});
+function closeLang(){lang.classList.remove('open');}
+document.addEventListener('click',e=>{if(!lang.contains(e.target))closeLang();});
+
+/* marquee */
+function buildMarquee(t){
+  const m=document.getElementById('marquee');
+  if(!m) return;
+  const words=[t.adv1_t,"BYDAUTOASIA.COM",t.adv3_t,t.adv2_t,"ASIA",t.adv4_t];
+  const set=()=>words.map((w,i)=>`<span class="${i%2?'fill':''}">${w}</span><span class="star">✦</span>`).join('');
+  m.innerHTML=set()+set();
+}
+
+/* ---------------- MODAL ---------------- */
+const offerSec=document.getElementById('offer');
+function openModal(){
+  offerSec.scrollIntoView({behavior:'smooth',block:'center'});
+  setTimeout(()=>{const f=offerSec.querySelector('input[name="name"]');if(f)f.focus({preventScroll:true});},650);
+}
+document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',openModal));
+
+/* form submit -> Web3Forms (recipient hidden from visitor) */
+const form=document.getElementById('offerForm');
+const submitBtn=document.getElementById('submitBtn');
+const formerr=document.getElementById('formerr');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const code=localStorage.getItem('bydautoasia_lang')||'en';
+  const t=I18N[code];
+  formerr.style.display='none';
+  submitBtn.disabled=true;submitBtn.textContent=t.sending;
+  const fd=new FormData(form);
+  const payload={
+    access_key:WEB3FORMS_ACCESS_KEY,
+    subject:`New offer for BYDAUTOASIA.COM — $${fd.get('amount')||''}`,
+    from_name:fd.get('name'),
+    domain:"bydautoasia.com",
+    name:fd.get('name'),email:fd.get('email'),phone:fd.get('phone'),
+    company:fd.get('company'),offer_amount_usd:fd.get('amount'),message:fd.get('message'),
+    site_language:code
+  };
+  const body=new FormData();
+  Object.entries(payload).forEach(([k,v])=>body.append(k,v==null?'':v));
+  try{
+    const res=await fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      body:body
+    });
+    const data=await res.json();
+    if(data.success){
+      document.getElementById('formView').style.display='none';
+      document.getElementById('successView').classList.add('show');
+    }else{throw new Error(data.message||'failed');}
+  }catch(err){
+    console.error('Web3Forms submit error:',err);
+    formerr.textContent=t.error_text;
+    formerr.style.display='block';
+    submitBtn.disabled=false;submitBtn.textContent=t.submit;
+  }
+});
+
+/* ---------------- MOTION ---------------- */
+function initMotion(){
+  setLang(detectLang());
+
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>30);
+  onScroll();
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // split hero title into chars (CSS-driven reveal via animation-delay)
+  let ci=0;
+  ["t1","t2"].forEach(id=>{
+    const el=document.getElementById(id);
+    el.innerHTML=el.textContent.split('').map(c=>{
+      const d=(0.15+ci*0.04).toFixed(2);ci++;
+      return `<span class="char" style="animation-delay:${d}s">${c}</span>`;
+    }).join('');
+  });
+
+  // daily-stable "offers received" counter for social proof
+  const oday=Math.floor(Date.now()/864e5);
+  const oseed=(oday*9301+49297)%233280/233280;
+  const oc=document.getElementById('offersCount');
+  if(oc) oc.textContent=19+Math.floor(oseed*22);
+
+  // reveal via IntersectionObserver (compositor-driven, robust)
+  const revealEls=document.querySelectorAll('[data-reveal]');
+  const groups=new Map();
+  revealEls.forEach(el=>{
+    const p=el.parentElement;
+    if(!groups.has(p))groups.set(p,[]);
+    groups.get(p).push(el);
+  });
+  groups.forEach(els=>{
+    const obs=new IntersectionObserver(entries=>{
+      entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*60);obs.unobserve(e.target)}});
+    },{threshold:.08});
+    els.forEach(el=>obs.observe(el));
+  });
+
+  // smooth lenis scroll (lightweight alternative to ScrollSmoother)
+  const lenis=new Lenis({duration:1.15,easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)),smoothWheel:true});
+  function raf(t){lenis.raf(t);requestAnimationFrame(raf);}
+  requestAnimationFrame(raf);
+
+  window.addEventListener('scroll',onScroll,{passive:true});
+}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initMotion);
+else initMotion();
+</script>
+</body>
+</html>
