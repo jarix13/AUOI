@@ -509,11 +509,12 @@ form.addEventListener('submit',async e=>{
     company:fd.get('company'),offer_amount_usd:fd.get('amount'),message:fd.get('message'),
     site_language:code
   };
+  const body=new FormData();
+  Object.entries(payload).forEach(([k,v])=>body.append(k,v==null?'':v));
   try{
     const res=await fetch('https://api.web3forms.com/submit',{
       method:'POST',
-      headers:{'Content-Type':'application/json',Accept:'application/json'},
-      body:JSON.stringify(payload)
+      body:body
     });
     const data=await res.json();
     if(data.success){

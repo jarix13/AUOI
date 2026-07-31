@@ -407,7 +407,7 @@
    this key on web3forms.com and is NEVER visible to visitors.
    Get a free key at https://web3forms.com (free tier: 250/mo).
    ============================================================ */
-const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY_HERE";
+const WEB3FORMS_ACCESS_KEY = "e8cc8f60-e3ff-4cc3-ae66-70f3518c2910";
 
 /* verification helper: ?static renders final state instantly (animations untouched for real users) */
 const STATIC = new URLSearchParams(location.search).has('static');
@@ -509,11 +509,12 @@ form.addEventListener('submit',async e=>{
     company:fd.get('company'),offer_amount_usd:fd.get('amount'),message:fd.get('message'),
     site_language:code
   };
+  const body=new FormData();
+  Object.entries(payload).forEach(([k,v])=>body.append(k,v==null?'':v));
   try{
     const res=await fetch('https://api.web3forms.com/submit',{
       method:'POST',
-      headers:{'Content-Type':'application/json',Accept:'application/json'},
-      body:JSON.stringify(payload)
+      body:body
     });
     const data=await res.json();
     if(data.success){
