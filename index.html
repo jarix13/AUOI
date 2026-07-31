@@ -151,33 +151,35 @@
   footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--muted);font-size:13.5px}
 
   /* MODAL */
-  .overlay{position:fixed;inset:0;z-index:1000;background:rgba(4,5,10,.72);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+  .overlay{position:fixed;inset:0;z-index:1000;background:rgba(4,5,10,.78);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
   .overlay.show{opacity:1;visibility:visible}
-  .modal{width:100%;max-width:560px;max-height:92vh;overflow-y:auto;background:linear-gradient(180deg,#12142a,#0c0e1c);border:1px solid var(--line);border-radius:26px;padding:34px 32px;position:relative;transform:scale(.9) translateY(12px);opacity:0}
+  .modal{width:100%;max-width:520px;max-height:92vh;overflow-y:auto;background:#fbfbfd;color:#0a0b14;border-radius:24px;padding:38px 32px 30px;position:relative;transform:scale(.92) translateY(12px);opacity:0;box-shadow:0 40px 120px rgba(10,6,40,.55)}
   .overlay.show .modal{animation:modalIn .5s cubic-bezier(.16,1,.3,1) forwards}
   @keyframes modalIn{to{transform:scale(1) translateY(0);opacity:1}}
-  .modal .top-accent{position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad);border-radius:26px 26px 0 0}
-  .modal h3{font-size:1.7rem;color:#fff}
-  .modal .msub{color:var(--muted);font-size:14.5px;margin:8px 0 22px}
-  .close{position:absolute;top:18px;inset-inline-end:18px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid var(--line);color:#fff;display:grid;place-items:center;transition:background .25s,transform .25s}
-  .close:hover{background:rgba(255,255,255,.15);transform:rotate(90deg)}
-  .field{margin-bottom:15px}
-  .row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-  label{display:block;font-size:12.5px;color:#c7cbe6;margin-bottom:7px;font-weight:500;letter-spacing:.02em}
-  input,textarea{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:13px;padding:13px 15px;color:#fff;font-size:14.5px;font-family:inherit;transition:border-color .25s,background .25s;outline:none}
-  input:focus,textarea:focus{border-color:var(--violet);background:rgba(255,255,255,.08)}
-  input::placeholder,textarea::placeholder{color:#5f6486}
-  textarea{resize:vertical;min-height:90px}
-  .ridicule{font-size:12.5px;color:#ffb27a;background:rgba(255,140,60,.08);border:1px solid rgba(255,140,60,.22);padding:11px 13px;border-radius:12px;margin:4px 0 18px;display:flex;gap:9px;align-items:flex-start}
-  .ridicule svg{flex-shrink:0;margin-top:1px}
-  .modal .cta{margin-top:4px}
+  .modal .top-accent{position:absolute;top:0;left:0;right:0;height:5px;background:var(--grad);border-radius:24px 24px 0 0}
+  .modal h3{font-size:1.6rem;color:#0a0b14;letter-spacing:-.01em}
+  .modal .msub{color:#5a607a;font-size:14px;margin:7px 0 24px;line-height:1.5}
+  .close{position:absolute;top:16px;inset-inline-end:16px;width:38px;height:38px;border-radius:50%;background:#eef0f6;border:1px solid #e3e6ef;color:#4a4f66;display:grid;place-items:center;transition:background .25s,transform .25s}
+  .close:hover{background:#e2e5ef;transform:rotate(90deg)}
+  .field{margin-bottom:14px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:block;font-size:12px;color:#3f4560;margin-bottom:6px;font-weight:600;letter-spacing:.02em}
+  input,textarea{width:100%;background:#fff;border:1.5px solid #e5e7f0;border-radius:12px;padding:12px 14px;color:#0a0b14;font-size:14.5px;font-family:inherit;transition:border-color .2s,box-shadow .2s;outline:none}
+  input:focus,textarea:focus{border-color:var(--violet);box-shadow:0 0 0 4px rgba(123,77,255,.12)}
+  input::placeholder,textarea::placeholder{color:#a7abbe}
+  textarea{resize:vertical;min-height:88px}
+  .ridicule{font-size:12.5px;color:#9a5b1e;background:#fff5ec;border:1px solid #ffdcae;padding:11px 13px;border-radius:12px;margin:2px 0 18px;display:flex;gap:9px;align-items:flex-start;line-height:1.45}
+  .ridicule svg{flex-shrink:0;margin-top:1px;color:#e8892b}
+  .modal .cta{margin-top:6px;box-shadow:0 14px 34px rgba(90,70,255,.32)}
   .cta[disabled]{opacity:.7;cursor:not-allowed}
+  .modal-trust{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;color:#7a8099;font-size:12px}
+  .modal-trust svg{color:#2fb56a;flex-shrink:0}
   .success{text-align:center;padding:26px 6px;display:none}
   .success.show{display:block;animation:modalIn .5s cubic-bezier(.16,1,.3,1)}
-  .success .tick{width:76px;height:76px;border-radius:50%;background:rgba(62,230,160,.12);border:1px solid rgba(62,230,160,.4);display:grid;place-items:center;margin:0 auto 20px;color:#3ee6a0}
-  .success h3{color:#fff;margin-bottom:10px}
-  .success p{color:var(--muted);font-size:14.5px}
-  .formerr{display:none;color:#ff7a8a;font-size:13.5px;margin-top:10px;text-align:center}
+  .success .tick{width:76px;height:76px;border-radius:50%;background:rgba(47,181,106,.12);border:1px solid rgba(47,181,106,.35);display:grid;place-items:center;margin:0 auto 20px;color:#2fb56a}
+  .success h3{color:#0a0b14;margin-bottom:10px}
+  .success p{color:#5a607a;font-size:14.5px;line-height:1.55}
+  .formerr{display:none;color:#d63a4b;font-size:13.5px;margin-top:10px;text-align:center}
 
   .offers{position:relative;display:inline-flex;align-items:center;gap:9px;margin:0 0 20px;padding:8px 14px;border-radius:100px;background:rgba(123,77,255,.09);border:1px solid rgba(123,77,255,.22);color:#4b3ca8;font-size:13px;font-weight:600}
   .offers .pulse{width:8px;height:8px;border-radius:50%;background:#7b4dff;animation:opulse 1.8s infinite}
@@ -381,6 +383,7 @@
           <div class="field"><label data-i18n="f_message">Message</label><textarea name="message" data-ph="f_message_ph" placeholder="Share your intended use or any questions…"></textarea></div>
           <button type="submit" class="cta" id="submitBtn" data-i18n="submit">Submit offer</button>
           <div class="formerr" id="formerr" data-i18n="error_text">Something went wrong. Please try again or email us directly.</div>
+          <div class="modal-trust"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span data-i18n="card_note">Confidential process · Secure escrow transfer available</span></div>
         </form>
       </div>
       <div class="success" id="successView">
