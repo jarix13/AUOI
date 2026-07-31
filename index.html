@@ -47,11 +47,6 @@
   .grid-fx{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(100% 70% at 50% 20%,#000 0%,transparent 75%);opacity:.5}
   .noise{position:fixed;inset:0;z-index:-1;opacity:.045;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-  /* cursor glow */
-  .cursor{position:fixed;top:0;left:0;width:26px;height:26px;border-radius:50%;border:1.5px solid rgba(255,255,255,.5);z-index:9999;pointer-events:none;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s,border-color .25s;mix-blend-mode:difference}
-  .cursor.big{width:64px;height:64px;background:rgba(255,255,255,.12);border-color:transparent}
-  @media(max-width:900px){.cursor{display:none}}
-
   .wrap{max-width:1200px;margin:0 auto;padding:0 26px}
 
   /* NAV */
@@ -222,7 +217,6 @@
   <div class="bg-fx"><div class="orb v"></div><div class="orb b"></div><div class="orb c"></div></div>
   <div class="grid-fx"></div>
   <div class="noise"></div>
-  <div class="cursor" id="cursor"></div>
 
   <!-- NAV -->
   <nav id="nav">
@@ -600,16 +594,6 @@ function initMotion(){
 if(document.readyState!=='loading') initMotion();
 else document.addEventListener('DOMContentLoaded',initMotion);
 if(new URLSearchParams(location.search).has('open')) openModal();
-
-/* cursor + magnetic */
-const cursor=document.getElementById('cursor');
-let cx=0,cy=0,tx=0,ty=0;
-window.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY;});
-(function loop(){cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;cursor.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;requestAnimationFrame(loop);})();
-document.querySelectorAll('[data-mag],a,button').forEach(el=>{
-  el.addEventListener('mouseenter',()=>cursor.classList.add('big'));
-  el.addEventListener('mouseleave',()=>cursor.classList.remove('big'));
-});
 </script>
 </body>
 </html>
